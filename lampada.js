@@ -1,13 +1,21 @@
 "use strict"
 
+function lampadaQuebrada(){
+    const lampada = document.getElementById("lampada")
+    return lampada.src.includes("quebrada")
+}
+
+
 function ligarLampada(){
     const lampada = document.getElementById("lampada")
     const botaoLigar = document.getElementById("ligar")
     const botaoDesligar = document.getElementById("desligar")
 
-    lampada.src = "img/ligada.jpg"
-    botaoLigar.disabled = true
-    botaoDesligar.disabled = false
+    if (!lampadaQuebrada()){
+        lampada.src = "img/ligada.jpg"
+        botaoLigar.disabled = true
+        botaoDesligar.disabled = false
+    }
 }
 
 function desligarLampada(){
@@ -15,13 +23,24 @@ function desligarLampada(){
     const botaoLigar = document.getElementById("ligar")
     const botaoDesligar = document.getElementById("desligar")
 
-    lampada.src = "img/desligada.jpg"
-    botaoLigar.disabled = false
-    botaoDesligar.disabled = true
+    if (!lampadaQuebrada()){
+        lampada.src = "img/desligada.jpg"
+        botaoLigar.disabled = false
+        botaoDesligar.disabled = true
+    }
  
 }
 
+function quebrarLampada(){
+    const lampada = document.getElementById("lampada")
+    const botaoLigar = document.getElementById("ligar")
+    const botaoDesligar = document.getElementById("desligar")
 
+    lampada.src = "img/quebrada.jpg"
+    botaoLigar.disabled = true
+    botaoDesligar.disabled = true
+
+}
 
 
 
@@ -33,8 +52,10 @@ document.getElementById('desligar')
     .addEventListener("click", desligarLampada)
 document.getElementById("lampada")
     .addEventListener("mouseover", ligarLampada)
-    document.getElementById("lampada")
+document.getElementById("lampada")
         .addEventListener("mouseleave", desligarLampada)
+document.getElementById("lampada")
+        .addEventListener("dblclick", quebrarLampada)
 
 
 
