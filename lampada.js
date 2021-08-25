@@ -9,6 +9,6 @@ function ligarLampada(){
 
 
 // eventos 
-document.getElementById('Ligar')
+document.getElementById('ligar')
     .addEventListener("click", ligarLampada)
 
