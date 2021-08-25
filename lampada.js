@@ -40,6 +40,10 @@ function quebrarLampada(){
 
 }
 
+function piscarLampada(){
+    
+}
+
 
 
 // eventos 
