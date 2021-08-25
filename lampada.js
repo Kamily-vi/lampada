@@ -1,5 +1,12 @@
 "use strict"
 
+function botoesLigaDesliga(estadoLiga, estadoDesliga){
+    const botaoLigar = document.getElementById("ligar")
+    const botaoDesligar= document.getElementById("desligar")
+    botaoLigar.disabled = estadoLiga
+    botaoDesligar.disabled = estadoDesliga
+}
+
 function lampadaQuebrada(){
     const lampada = document.getElementById("lampada")
     return lampada.src.includes("quebrada")
@@ -8,37 +15,28 @@ function lampadaQuebrada(){
 
 function ligarLampada(){
     const lampada = document.getElementById("lampada")
-    const botaoLigar = document.getElementById("ligar")
-    const botaoDesligar = document.getElementById("desligar")
 
     if (!lampadaQuebrada()){
         lampada.src = "img/ligada.jpg"
-        botaoLigar.disabled = true
-        botaoDesligar.disabled = false
+       botoesLigaDesliga(true, false)
     }
 }
 
 function desligarLampada(){
     const lampada = document.getElementById("lampada")
-    const botaoLigar = document.getElementById("ligar")
-    const botaoDesligar = document.getElementById("desligar")
-
+    
     if (!lampadaQuebrada()){
         lampada.src = "img/desligada.jpg"
-        botaoLigar.disabled = false
-        botaoDesligar.disabled = true
+        botoesLigaDesliga(false, true)
     }
  
 }
 
 function quebrarLampada(){
     const lampada = document.getElementById("lampada")
-    const botaoLigar = document.getElementById("ligar")
-    const botaoDesligar = document.getElementById("desligar")
-
+    
     lampada.src = "img/quebrada.jpg"
-    botaoLigar.disabled = true
-    botaoDesligar.disabled = true
+   botoesLigaDesliga(true, true)
 
 }
 
