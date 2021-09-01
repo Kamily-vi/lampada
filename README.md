@@ -7,6 +7,6 @@ O projeto consiste em criar uma lâmpada que tenha quatro ações:
 * quebrar
 * piscar
 
-Todo o código foi construído seguindo as boa práticas, como responsabilidade única e funções puras.
+Todo o código foi construído seguindo as boas práticas, como responsabilidade única e funções puras.
 
 ![](img/capturaLampada.PNG)
