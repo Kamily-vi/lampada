@@ -5,6 +5,7 @@ O projeto consiste em criar uma lâmpada que tenha três ações:
 * ligar
 * desligar
 * quebrar
+* piscar
 
 Todo o código foi construído seguindo as boa práticas, como responsabilidade única e funções puras.
 
