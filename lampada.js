@@ -7,6 +7,9 @@ function botoesLigaDesliga(estadoLiga, estadoDesliga){
     botaoDesligar.disabled = estadoDesliga
 }
 
+let idLigar
+let idDesligar
+
 function lampadaQuebrada(){
     const lampada = document.getElementById("lampada")
     return lampada.src.includes("quebrada")
@@ -40,10 +43,21 @@ function quebrarLampada(){
 
 }
 
+function pararPiscar(){
+    clearInterval(idLigar)
+    clearInterval(idDesligar)
+}
+
 function piscar(){
-    setInterval(ligarLampada, 1000)
-    setInterval(desligarLampada, 2000)
-    
+    const botaoPiscar = document.getElementById("piscar")
+    if (botaoPiscar.textContent == "Piscar"){
+    idLigar = setInterval(ligarLampada, 500)
+    idDesligar = setInterval(desligarLampada, 1000)
+    document.getElementById("piscar").textContent = "Parar"
+    } else{
+        pararPiscar()
+        botaoPiscar.textContent = "Piscar"
+    }
 }
 
 
