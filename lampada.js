@@ -5,6 +5,7 @@ function botoesLigaDesliga(estadoLiga, estadoDesliga){
     const botaoDesligar= document.getElementById("desligar")
     botaoLigar.disabled = estadoLiga
     botaoDesligar.disabled = estadoDesliga
+    
 }
 
 let idLigar
@@ -59,7 +60,6 @@ function piscar(){
         botaoPiscar.textContent = "Piscar"
     }
 }
-
 
 
 // eventos 
