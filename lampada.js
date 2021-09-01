@@ -40,7 +40,9 @@ function quebrarLampada(){
 
 }
 
-function piscarLampada(){
+function piscar(){
+    setInterval(ligarLampada, 1000)
+    setInterval(desligarLampada, 2000)
     
 }
 
@@ -49,7 +51,6 @@ function piscarLampada(){
 // eventos 
 document.getElementById('ligar')
     .addEventListener("click", ligarLampada)
-
 document.getElementById('desligar')
     .addEventListener("click", desligarLampada)
 document.getElementById("lampada")
@@ -58,6 +59,7 @@ document.getElementById("lampada")
         .addEventListener("mouseleave", desligarLampada)
 document.getElementById("lampada")
         .addEventListener("dblclick", quebrarLampada)
-
+document.getElementById("piscar")
+        .addEventListener("click", piscar)
 
 
