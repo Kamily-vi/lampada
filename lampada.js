@@ -47,6 +47,7 @@ const quebrarLampada = () => {
 const pararPiscar = () => {
     clearInterval(idLigar)
     clearInterval(idDesligar)
+    
 }
 
 const piscar = () => {
@@ -55,9 +56,12 @@ const piscar = () => {
     idLigar = setInterval(ligarLampada, 500)
     idDesligar = setInterval(desligarLampada, 1000)
     document.getElementById("piscar").textContent = "Parar"
+    botaoPiscar.style.backgroundColor = "Red"
     } else{
         pararPiscar()
         botaoPiscar.textContent = "Piscar"
+        botaoPiscar.style.backgroundColor = "Green"
+
     }
 }
 

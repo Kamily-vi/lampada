@@ -44,3 +44,7 @@ footer{
     align-items: flex-start;
     font-style: italic;
 }
+
+.botaoPiscar{
+    background-color: green;
+}
